@@ -25,6 +25,6 @@ read_string = function(str){
   framed <- data.frame(framed)
   colnames(framed) <- label_lines
 
-
+  options(oldop)
   return(framed)
 }
