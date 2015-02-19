@@ -1,0 +1,11 @@
+Package: mochiutils
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2015-02-19
+Author: Windfall-j
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+License: MIT + file LICENSE
+Suggests:
+    testthat
