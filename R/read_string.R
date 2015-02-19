@@ -6,7 +6,7 @@
 #'
 #'@export
 read_string = function(str){
-
+  oldop <- options(stringsAsFactors=FALSE)
 
   first_line <- strsplit(str, "\n")[[1]][1]
   n_col <- length( strsplit(first_line, "\\s+")[[1]] )
@@ -22,8 +22,9 @@ read_string = function(str){
   for( i in 1:n_col ){
     framed <- cbind( framed, data_lines[seq(i,length(data_lines),by=n_col)] )
   }
-  framed <- data.frame(framed, stringsAsFactors = FALSE)
+  framed <- data.frame(framed)
   colnames(framed) <- label_lines
+
 
   return(framed)
 }
